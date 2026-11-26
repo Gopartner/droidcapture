@@ -1,16 +1,133 @@
-# React + Vite
+# DroidCapture
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight desktop application for recording Android screens from a Windows PC, with support for device audio and optional microphone recording.
 
-Currently, two official plugins are available:
+Built with Electron, React, and Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview
 
-## React Compiler
+DroidCapture is a desktop utility designed to capture Android screen recordings directly from a computer. It aims to provide a simple recording interface without requiring a complicated workflow.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The goal is to make Android screen recording easy to control from a desktop, including recording audio from the Android device and optionally combining it with microphone input.
 
-## Expanding the ESLint configuration
+## Planned Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [ ] Android device detection via ADB
+- [ ] USB-connected Android device support
+- [ ] Screen recording
+- [ ] Device audio recording
+- [ ] Device audio only mode
+- [ ] Device audio + microphone mode
+- [ ] Microphone selection
+- [ ] Microphone audio level indicator
+- [ ] Recording timer
+- [ ] Start / Stop recording controls
+- [ ] Custom output directory
+- [ ] Automatic video filename generation
+- [ ] MP4 video output
+- [ ] Windows installer
+
+## Recording Modes
+
+### Device Audio Only
+
+Record the Android screen and audio from the device without capturing microphone input.
+
+Use cases:
+
+- Recording app demonstrations
+- Gameplay recording
+- Tutorial footage
+- Recording Android application audio
+
+### Device Audio + Microphone
+
+Record Android screen, device audio, and microphone input simultaneously.
+
+Use cases:
+
+- Voice tutorials
+- App walkthroughs
+- Gameplay commentary
+- Educational recordings
+
+## Technology Stack
+
+| Technology | Purpose                                                |
+| ---------- | ------------------------------------------------------ |
+| Electron   | Desktop application framework                          |
+| React      | User interface                                         |
+| Vite       | Development server and frontend build                  |
+| Node.js    | Desktop application processes                          |
+| ADB        | Android device communication                           |
+| scrcpy     | Android screen and audio capture integration (planned) |
+| FFmpeg     | Audio/video processing (planned)                       |
+
+## Development Status
+
+**Status: Early Development**
+
+The project is currently in its initial setup phase.
+
+The repository and development environment have been initialized. The user interface and Android recording integration are under development.
+
+## Requirements
+
+Planned development environment:
+
+- Windows 10 / Windows 11
+- Node.js
+- npm
+- Android Debug Bridge (ADB)
+- Android device with USB debugging enabled
+
+Additional requirements may be introduced as development progresses.
+
+## Development Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Gopartner/droidcapture.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd droidcapture
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development environment:
+
+```bash
+npm run dev
+```
+
+## Roadmap
+
+- [x] Initialize project repository
+- [x] Set up React + Vite
+- [x] Initialize Git and GitHub repository
+- [ ] Build desktop interface
+- [ ] Integrate Electron
+- [ ] Detect Android devices
+- [ ] Implement screen recording
+- [ ] Implement device audio capture
+- [ ] Implement microphone capture
+- [ ] Audio mixing and synchronization
+- [ ] Export recordings to MP4
+- [ ] Package Windows application
+
+## Repository
+
+GitHub: https://github.com/Gopartner/droidcapture
+
+## License
+
+License not yet specified.
